@@ -2,27 +2,23 @@
 
 <% content_for :title, "Movies" %>
 
-<h1 class="title-movie text-center mb-5">Films</h1>
-
-
-
+<h1>Films</h1>
 <div class="container">
-    <div id="movies" class="row justify-content-center">
-      <% @movies.each do |movie| %>
+  <div id="movies" class="row justify-content-center">
+    <% @movies.each do |movie| %>
       <div class="col-md-6 d-flex justify-content-center">
         <div class="movie-card">
-              <%= render movie %>
-                <p>
-                  <%= link_to "Voir le film", movie , class: "btn btn-outline-primary" %>
-                </p>
-            </div>
-          </div>
-      <% end %>
-    </div>
+          <%= render movie %>
+          <p>
+            <%= link_to "Voir le film", movies_path, class: "btn btn-outline-primary" %>
+          </p>
+        </div>
+      </div>
+    <% end %>
+  </div>
 </div>
 
-
 <div class="container mt-5 d-flex justify-content-end mb-5 gap-2">
-  <%= link_to "Nouveau film", class:"btn btn-outline-primary justify-content-center", new_movie_path %>
-  <%= link_to "Voir le producteur" , directors_path, class: "btn btn-outline-primary" %>
+  <%= link_to "Nouveau film", new_movie_path, class:"btn btn-outline-primary justify-content-center" %>
+  <%= link_to "Voir le producteur", directors_path, class: "btn btn-outline-primary" %>
 </div>
