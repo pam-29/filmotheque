@@ -2,10 +2,16 @@
 
 <% content_for :title, "Directors" %>
 
+  <div class="container mt-5 d-flex justify-content-end gap-2">
+    <%= link_to "Voir les films", movies_path, class: "btn btn-outline-primary" %>
+    <%= link_to "Nouveau producteur", new_director_path, class: "btn btn-outline-primary" %>
+  </div>
+
+
 <h1 class=" title-director text-center ">PRODUCTEURS</h1>
 
 <div class="container">
-  <div id="directors" class="row" d-flex justify-content-center>
+  <div id="directors" class="row d-flex">
     <% @directors.each do |director| %>
       <div class="col-md-4">
         <div class="director-card">
@@ -17,9 +23,4 @@
       </div>
     <% end %>
   </div>
-</div>
-
-<div class="container mt-5 d-flex justify-content-end gap-2 mb-4">
-  <%= link_to "Voir les films", movies_path, class: "btn btn-outline-primary" %>
-  <%= link_to "Créer un nouveau producteur", new_director_path, class: "btn btn-outline-primary" %>
 </div>
