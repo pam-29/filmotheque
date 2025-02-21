@@ -2,15 +2,26 @@
 
 <% content_for :title, "Movies" %>
 
-<h1>Movies</h1>
+<h1>Films</h1>
 
-<div id="movies">
-  <% @movies.each do |movie| %>
-    <%= render movie %>
-    <p>
-      <%= link_to "Show this movie", movie %>
-    </p>
-  <% end %>
+
+
+<div class="container">
+    <div id="movies" class="row">
+      <div class="col-md-6">
+        <div class="movie-card">
+            <% @movies.each do |movie| %>
+              <%= render movie %>
+                <p>
+                  <%= link_to "Voir le film", movie , class: "btn btn-outline-primary" %>
+                </p>
+            </div>
+          </div>
+      <% end %>
+    </div>
 </div>
 
-<%= link_to "New movie", new_movie_path %>
+
+<div class="container mt-5">
+<%= link_to "Nouveau film", class:"btn btn-outline-primary justify-content-center", new_movie_path %>
+</div>

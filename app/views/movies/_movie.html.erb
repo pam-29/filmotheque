@@ -1,7 +1,7 @@
 <div id="<%= dom_id movie %>">
     <strong>Image:</strong>
   <p>
-    <%= image_tag movie.image, width: 200 %>
+    <%= image_tag movie.image, width: 400, height:500 %>
   </p>
 
   <p>
@@ -9,23 +9,23 @@
     <%= movie.title %>
   </p>
 
-  <p>
-    <strong>Summary:</strong>
+  <p class="summary">
+    <strong>Résumé:</strong> <br>
     <%= movie.summary %>
   </p>
 
   <p>
-    <strong>Release year:</strong>
+    <strong>Date de sortie:</strong>
     <%= movie.release_year %>
   </p>
 
-  <p>
-    <strong>Actor:</strong>
+  <p class="title">
+    <strong>Acteurs:</strong><br>
     <%= movie.actor %>
   </p>
 
   <p>
-    <strong>Director:</strong>
+    <strong>Producteur:</strong>
     <%= movie.director %>
   </p>
 
