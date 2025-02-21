@@ -7,8 +7,8 @@
 
 
 <div class="container">
-    <div id="movies" class="row">
-      <div class="col-md-6">
+    <div id="movies" class="row justify-content-center">
+      <div class="col-md-6 d-flex justify-content-center">
         <div class="movie-card">
             <% @movies.each do |movie| %>
               <%= render movie %>
@@ -22,6 +22,7 @@
 </div>
 
 
-<div class="container mt-5">
-<%= link_to "Nouveau film", class:"btn btn-outline-primary justify-content-center", new_movie_path %>
+<div class="container mt-5 d-flex justify-content-end mb-5 gap-2">
+  <%= link_to "Nouveau film", class:"btn btn-outline-primary justify-content-center", new_movie_path %>
+  <%= link_to "Voir le producteur" , directors_path, class: "btn btn-outline-primary" %>
 </div>
