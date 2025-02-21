@@ -2,7 +2,7 @@
 
 <% content_for :title, "Movies" %>
 
-<h1 class="title-movie text-center mb-4">Films</h1>
+<h1 class="title-movie text-center ">Films</h1>
 <div class="container">
   <div id="movies" class="row justify-content-center">
     <% @movies.each do |movie| %>
@@ -10,7 +10,7 @@
         <div class="movie-card">
           <%= render movie %>
           <p>
-            <%= link_to "Voir le film", movie_path(movie) , class: "btn btn-outline-primary" %>
+            <%= link_to "Voir le film", movie_path(movie) , class: "btn btn-outline-primary button-movie" %>
           </p>
         </div>
       </div>
