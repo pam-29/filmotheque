@@ -5,7 +5,7 @@
 <h1 class=" title-director text-center mb-5">PRODUCTEURS</h1>
 
 <div class="container">
-  <div id="directors" class="row">
+  <div id="directors" class="row" d-flex justify-content-center>
     <% @directors.each do |director| %>
       <div class="col-md-4">
         <div class="director-card">
@@ -19,6 +19,7 @@
   </div>
 </div>
 
-<div class="container mt-5">
-<%= link_to "Créer un nouveau producteur", new_director_path, class: "btn btn-outline-primary justify-content-center" %>
+<div class="container mt-5 d-flex justify-content-end ">
+  <%= link_to "Voir les films", movies_path, class: "btn btn-outline-primary" %>
+<%= link_to "Créer un nouveau producteur", new_director_path, class: "btn btn-outline-primary" %>
 </div>
