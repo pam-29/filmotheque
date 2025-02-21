@@ -2,7 +2,7 @@
 
 <% content_for :title, "Movies" %>
 
-<h1>Films</h1>
+<h1 class="title-movie text-center mb-4">Films</h1>
 <div class="container">
   <div id="movies" class="row justify-content-center">
     <% @movies.each do |movie| %>
@@ -10,7 +10,7 @@
         <div class="movie-card">
           <%= render movie %>
           <p>
-            <%= link_to "Voir le film", movies_path, class: "btn btn-outline-primary" %>
+            <%= link_to "Voir le film", movie , class: "btn btn-outline-primary" %>
           </p>
         </div>
       </div>
@@ -20,5 +20,5 @@
 
 <div class="container mt-5 d-flex justify-content-end mb-5 gap-2">
   <%= link_to "Nouveau film", new_movie_path, class:"btn btn-outline-primary justify-content-center" %>
-  <%= link_to "Voir le producteur", directors_path, class: "btn btn-outline-primary" %>
+  <%= link_to "Voir les producteurs", directors_path, class: "btn btn-outline-primary" %>
 </div>
