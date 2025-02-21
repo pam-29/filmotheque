@@ -2,15 +2,23 @@
 
 <% content_for :title, "Directors" %>
 
-<h1>Directors</h1>
+<h1 class=" title-director text-center mb-5">PRODUCTEURS</h1>
 
-<div id="directors">
-  <% @directors.each do |director| %>
-    <%= render director %>
-    <p>
-      <%= link_to "Show this director", director %>
-    </p>
-  <% end %>
+<div class="container">
+  <div id="directors" class="row">
+    <% @directors.each do |director| %>
+      <div class="col-md-4">
+        <div class="director-card">
+          <%= render director %>
+            <p>
+              <%= link_to "Voir ce producteur", director, class: "btn btn-outline-primary mt-2" %>
+            </p>
+        </div>
+      </div>
+    <% end %>
+  </div>
 </div>
 
-<%= link_to "New director", new_director_path %>
+<div class="container mt-5">
+<%= link_to "Créer un nouveau producteur", new_director_path, class: "btn btn-outline-primary justify-content-center" %>
+</div>

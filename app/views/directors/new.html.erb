@@ -1,11 +1,11 @@
 <% content_for :title, "New director" %>
 
-<h1>New director</h1>
+<h1 class="mx-4">Nouveau producteur</h1>
 
 <%= render "form", director: @director %>
 
 <br>
 
 <div>
-  <%= link_to "Back to directors", directors_path %>
+  <%= link_to "Revenir aux producteurs", directors_path, class: "btn btn-outline-primary mx-4" %>
 </div>

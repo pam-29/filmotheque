@@ -1,23 +1,20 @@
-<div id="<%= dom_id director %>">
+<div id="<%= dom_id director%>" class="director">
   <p>
-    <strong>First name:</strong>
+    <strong>Prénom:</strong>
     <%= director.first_name %>
   </p>
 
   <p>
-    <strong>Last name:</strong>
+    <strong>Nom:</strong>
     <%= director.last_name %>
   </p>
 
-    <strong>Image:</strong>
+    <p class="img-fluid"><strong>Image:</strong></p>
   <p>
-    <%= image_tag director.image, width: 200 %>
+    <%= image_tag director.image, width: 200, height: 290, class: "rounded shadow" %>
   </p>
 
-<h1> Films produits </h1>
-<ul>
-  <% director.movies.each do |movie| %>
-    <li> <%= link_to movie %> </li>
-    <%end%>
-</ul>
+
+  <%= link_to "Voir ces films", movies_path, class: "btn btn-outline-primary" %>
 </div>
+

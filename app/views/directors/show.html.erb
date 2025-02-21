@@ -3,8 +3,8 @@
 <%= render @director %>
 
 <div>
-  <%= link_to "Edit this director", edit_director_path(@director) %> |
-  <%= link_to "Back to directors", directors_path %>
+  <%= link_to "Modifiers le producteurs", edit_director_path(@director), class: "btn btn-outline-primary" %> 
+  <%= link_to "Revenir à l'accueil", directors_path, class: "btn btn-outline-primary" %>
 
-  <%= button_to "Destroy this director", @director, method: :delete %>
+  <%= button_to "Supprimer", @director, method: :delete, class: "btn btn-outline-danger" %>
 </div>
