@@ -2,16 +2,6 @@
 // Custom bootstrap variables must be set or imported *before* bootstrap.
 @import "bootstrap";
 
-.liste{
-    a{
-        text-decoration: none;
-        color: black;
-    }
-    a:hover{
-        color: blue;
-    }
-}
-
 .title-director,
 .title-movie{
     color: rgb(44, 100, 231);
